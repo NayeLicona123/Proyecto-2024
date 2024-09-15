@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Rendimiento y Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Seguimiento del Rendimiento y Calificaciones de Estudiantes</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Registro de Rendimiento</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Estudiante</th>
+                    <th>Materia</th>
+                    <th>Calificación Obtenida</th>
+                    <th>Progreso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de datos, estos deberían ser dinámicos en una aplicación real -->
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>Matemáticas</td>
+                    <td>85</td>
+                    <td>En progreso</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>Inglés</td>
+                    <td>90</td>
+                    <td>Completado</td>
+                </tr>
+                <!-- Más filas pueden ser añadidas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Instituto Técnico Modesto Rodas Alvarado</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Examen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 28px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .resultado {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .btn-regresar {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-regresar:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados del Examen</h1>
+        <p>Has respondido correctamente <strong><?php echo $resultado_final; ?></strong> de <strong><?php echo $total_preguntas; ?></strong> preguntas.</p>
+        <p class="resultado">Tu puntaje es: <strong><?php echo $porcentaje_aciertos; ?>%</strong></p>
+
+        <?php if ($porcentaje_aciertos >= 70) { ?>
+            <p>¡Felicidades! Has aprobado el examen.</p>
+        <?php } else { ?>
+            <p>No has alcanzado el puntaje mínimo. ¡Sigue practicando!</p>
+        <?php } ?>
+
+        <a href="index.php"><button class="btn-regresar">Regresar a Temas</button></a>
+    </div>
+
+    <footer>
+        &copy; 2024 Plataforma de Exámenes - Todos los derechos reservados.
+    </footer>
+</body>
+</html>

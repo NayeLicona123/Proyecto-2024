@@ -1,0 +1,4 @@
+"id","tema_Id","pregunta_ TEXT","opcion_a","opcion_b","opcion_c","opcion_d","respuesta_correcta"
+"id","estudiante_id","pregunta_id","respuesta_seleccionada","es_correcta"
+"id","nombre","descripcion TEXT","fecha_creacion"
+"id","nombre","genero","colegio","correo","telefono","contrasena","fecha_registro"

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Temas de Estudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-weight: 500;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .temas {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .action-buttons a {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .fa-edit, .fa-trash-alt {
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .fa-edit:hover {
+            color: #0056b3;
+        }
+
+        .fa-trash-alt:hover {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Tema de Estudio</h1>
+        <form action="crear_tema.php" method="POST">
+            <label for="nombre">Nombre del Tema:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduzca el nombre del tema" required>
+
+            <label for="descripcion">Descripción del Tema:</label>
+            <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describa el tema de estudio" required></textarea>
+
+            <button type="submit">Crear Tema</button>
+        </form>
+    </div>
+
+    <div class="container temas">
+        <h2>Temas de Estudio Existentes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-temas">
+                <!-- Aquí se mostrarán los temas dinámicamente -->
+                <tr>
+                    <td>1</td>
+                    <td>Programación I</td>
+                    <td>Introducción a la programación.</td>
+                    <td class="action-buttons">
+                        <a href="#"><i class="fas fa-edit"></i></a>
+                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Matemáticas</td>
+                    <td>Álgebra, geometría y trigonometría.</td>
+                    <td class="action-buttons">
+                        <a href="#"><i class="fas fa-edit"></i></a>
+                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                <!-- Aquí añadirás más temas -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

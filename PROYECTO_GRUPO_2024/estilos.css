@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  background: #008000; /* Fondo verde */
+  display: flex;
+  min-height: 100vh;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  max-width: 500px;
+  background: #FFFFFF; /* Fondo blanco */
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+}
+
+
+form img {
+    position: absolute;
+    width: 50px; /* Ancho del logo */
+    height: 50px; /* Alto del logo */
+}
+
+.logo-top-left {
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+}
+
+.logo-top-right {
+    top: 10px; /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la derecha */
+  }
+
+input[type="text"], input[type="password"], input[type="submit"] {
+  margin-bottom: 15px; /* Separación entre los campos */
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #008000; /* Botón verde */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #006400; /* Color más oscuro al pasar el mouse */
+}
+

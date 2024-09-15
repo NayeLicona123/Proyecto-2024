@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen - <?php echo $tema['nombre']; ?></title>
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo de estilo externo -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .pregunta {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .pregunta p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .opciones {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        .opciones label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .opciones input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Examen de Programacion <?php echo $tema['nombre']; ?></h1>
+        <form action="procesar_test.php" method="POST">
+            <input type="hidden" name="tema_id" value="<?php echo $tema_id; ?>">
+            <?php while ($pregunta = $result_preguntas->
+                <div class="pregunta">
+                    <p><?php echo $pregunta['pregunta']; ?></p>
+                    <div class="opciones">
+                        <label><input type="radio" name="pregunta_<?php echo $pregunta['id']; ?>" value="A"> A. <?php echo $pregunta['opcion_a']; ?></label>
+                        <label><input type="radio" name="pregunta_<?php echo $pregunta['id']; ?>" value="B"> B. <?php echo $pregunta['opcion_b']; ?></label>
+                        <label><input type="radio" name="pregunta_<?php echo $pregunta['id']; ?>" value="C"> C. <?php echo $pregunta['opcion_c']; ?></label>
+                        <label><input type="radio" name="pregunta_<?php echo $pregunta['id']; ?>" value="D"> D. <?php echo $pregunta['opcion_d']; ?></label>
+                    </div>
+                </div>
+            <?php } ?>
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Plataforma de Exámenes - Todos los derechos reservados.
+    </footer>
+</body>
+</html>
+
+<?php $conn->close(); ?>
